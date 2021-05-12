@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { LoginForm } from "../../components/login/Login";
+import { ForgotPassword } from "../../components/ForgotPassword/ForgotPassword";
 import "../../styles/Entry.css";
 
 export const Entry = () => {
@@ -37,6 +38,11 @@ export const Entry = () => {
           handleOnSubmit={handleOnSubmit}
           email={email}
           password={password}
+        />
+        <ForgotPassword
+          handleOnChange={handleOnChange}
+          handleOnSubmit={handleOnSubmit}
+          email={email}
         />
       </div>
     </div>
