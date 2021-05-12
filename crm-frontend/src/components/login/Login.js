@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-export const Login = () => {
+export const LoginForm = () => {
   return (
     <div>
       <Container>
@@ -19,6 +19,16 @@ export const Login = () => {
                   required
                 />
               </Form.Group>
+              <Form.Group>
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+              </Form.Group>
+              <Button type="submit">Login</Button>
             </Form>
           </Col>
         </Row>
