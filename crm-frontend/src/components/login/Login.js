@@ -5,6 +5,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 export const LoginForm = ({
   handleOnChange,
   handleOnSubmit,
+  formSwitcher,
   email,
   password,
 }) => {
@@ -51,7 +52,9 @@ export const LoginForm = ({
         </Row>
         <Row>
           <Col>
-            <a href="#!">Forgot Password?</a>
+            <a href="#!" onClick={() => formSwitcher("reset")}>
+              Forgot Password?
+            </a>
           </Col>
         </Row>
       </Container>
@@ -61,6 +64,8 @@ export const LoginForm = ({
 
 LoginForm.propTypes = {
   handleOnChange: PropTypes.func.isRequired,
+  handleOnSubmit: PropTypes.func.isRequired,
+  formSwitcher: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
 };
